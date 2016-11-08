@@ -11,7 +11,7 @@ export default class StringsWebpackPlugin {
     apply(compiler) {
         compiler.plugin('after-emit', compilation => {
             const found = {};
-            Object.keys(compilation.assets).forEach(function (basename) {
+            Object.keys(compilation.assets).forEach(basename => {
                 const source = compilation.assets[basename].source();
                 for (var i = 0; i < this.strings.length; i++) {
                     log('searching for %s in %s', this.strings[i], basename);
