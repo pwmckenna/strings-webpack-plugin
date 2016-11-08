@@ -1,6 +1,6 @@
 {
   "name": "strings-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "print strings found in the webpack output that match a whitelist of strings",
   "main": "lib/index.js",
   "scripts": {
