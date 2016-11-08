@@ -1,0 +1,25 @@
+{
+  "name": "strings-webpack-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwmckenna/strings-webpack-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pwmckenna/strings-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/pwmckenna/strings-webpack-plugin#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-pwmckenna": "^1.0.2",
+    "debug": "^2.3.0"
+  }
+}
