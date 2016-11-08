@@ -4,9 +4,11 @@ print strings found in the output that match a whitelist of strings
 
 ## Usage
 
+webpack.config.js
 ```js
-import StringsPlugin from 'strings-webpack-plugin';
-{
+var StringsPlugin = require('strings-webpack-plugin');
+
+module.exports = {
    ...
    plugins: [
         new StringsPlugin({
