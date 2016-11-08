@@ -1,12 +1,17 @@
 {
   "name": "strings-webpack-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "print strings found in the webpack output that match a whitelist of strings",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+      "webpack",
+      "plugin",
+      "strings"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pwmckenna/strings-webpack-plugin.git"
