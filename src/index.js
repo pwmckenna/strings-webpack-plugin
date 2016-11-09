@@ -9,19 +9,19 @@ export default class StringsWebpackPlugin {
         this.file = options.file;
     }
     apply(compiler) {
-        compiler.plugin('after-emit', compilation => {
+        compiler.plugin('after-emit', (compilation, cb) => {
             const found = {};
             Object.keys(compilation.assets).forEach(basename => {
                 const source = compilation.assets[basename].source();
                 for (var i = 0; i < this.strings.length; i++) {
-                    log('searching for %s in %s', this.strings[i], basename);
                     if (source.indexOf(this.strings[i]) !== -1) {
+                        log(`string "${this.strings[i]}" found in ${basename}`);
                         found[this.strings[i]] = true;
                     }
                 }
             });
-
-            fs.writeFileSync(this.file, JSON.stringify(Object.keys(found), null, 4));
+            log(`writing strings ${JSON.stringify(Object.keys(found), null, 4)} to ${this.file}`);
+            fs.writeFile(this.file, JSON.stringify(Object.keys(found), null, 4), cb);
         });
     }
 }
